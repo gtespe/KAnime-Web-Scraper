@@ -1,3 +1,3 @@
 #!/bin/bash
-xvfb-run -a ./gibkiss.py
+xvfb-run -a ./main.py
 
