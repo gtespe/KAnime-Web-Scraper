@@ -6,12 +6,14 @@ from selenium import webdriver
 # from selenium.webdriver.common.keys import Keys
 
 # Set up the webdriver with extensiosn
-options = webdriver.ChromeOptions() 
-options.add_extension("ublockorigin.crx")
-options.add_extension("blockimages.crx")
-options.add_extension("disableautoplay.crx")
-driver = webdriver.Chrome(chrome_options=options)
-driver.get("https://.kissanime.to/Login")
+# options = webdriver.ChromeOptions() 
+# options.add_extension("ublockorigin.crx")
+#options.add_extension("blockimages.crx")
+#options.add_extension("disableautoplay.crx")
+#driver = webdriver.Chrome(chrome_options=options)
+ffprofile = webdriver.FirefoxProfile("./366j48ag.selenium")
+driver= webdriver.Firefox(firefox_profile=ffprofile)
+driver.get("https://www.kissanime.to/Login")
 
 # Get inputs for login + serach
 username = input("Username: ")

@@ -9,7 +9,8 @@ To Run, Simply execute ./getAnime.sh
 
 Dependencies:
 
-    Chrome Webdriver:
+    Firefox (default)
+    OR Chrome Webdriver:
         https://sites.google.com/a/chromium.org/chromedriver/downloads
 
     xvfb:
