@@ -1,11 +1,11 @@
-# Web_Scraper
+# KAnime Scraper
 
 By Grant Espe
 
 This program is used to download anime in bulk off of www.kissanime.to
 
 To Run, Simply execute ./getAnime.sh
-    this will launch a chrome webdriver in a hidden xvfb window
+    this will launch a firefox webdriver in a hidden xvfb window
 
 Dependencies:
 
@@ -24,5 +24,3 @@ Dependencies:
         BeautifulSoup:
             sudo pip install BeautifulSoup
 
-You also need a kissanime account to run this script
-    (Your username and password are never logged)
