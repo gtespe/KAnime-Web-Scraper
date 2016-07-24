@@ -1,6 +1,6 @@
 #!/usr/bin/python
 from bs4 import BeautifulSoup
-import getpass
+# import getpass
 import urllib.request
 from selenium import webdriver
 # from selenium.webdriver.common.keys import Keys
@@ -13,23 +13,25 @@ from selenium import webdriver
 #driver = webdriver.Chrome(chrome_options=options)
 ffprofile = webdriver.FirefoxProfile("./366j48ag.selenium")
 driver= webdriver.Firefox(firefox_profile=ffprofile)
-driver.get("https://www.kissanime.to/Login")
+#driver.get("https://www.kissanime.to/Login")
+
+driver.get("https://www.kissanime.to/AnimeList")
 
 # Get inputs for login + serach
-username = input("Username: ")
-password = getpass.getpass("Password: ")
+# username = input("Username: ")
+# password = getpass.getpass("Password: ")
 keyword = input("Enter Search Terms: ")
 print("Loading...")
 
+# user_elem = driver.find_element_by_id("username")
+# user_elem.send_keys(username)
+
+# pass_elem = driver.find_element_by_id("password")
+# pass_elem.send_keys(password)
+
+# driver.find_element_by_id("btnSubmit").click()
+
 # Send data
-user_elem = driver.find_element_by_id("username")
-user_elem.send_keys(username)
-
-pass_elem = driver.find_element_by_id("password")
-pass_elem.send_keys(password)
-
-driver.find_element_by_id("btnSubmit").click()
-
 search_elem = driver.find_element_by_id("keyword")
 search_elem.send_keys(keyword)
 
