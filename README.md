@@ -1,4 +1,4 @@
-# KAnime Scraper
+# KAnime Web Scraper
 
 By Grant Espe
 
