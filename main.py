@@ -14,7 +14,7 @@ from selenium import webdriver
 ffprofile = webdriver.FirefoxProfile("./366j48ag.selenium")
 driver= webdriver.Firefox(firefox_profile=ffprofile)
 
-driver.get("https://www.kissanime.to/AnimeList")
+driver.get("https://www.kissanime.to/Login")
 
 # Get inputs for login + serach -- OUTDATED
 # username = input("Username: ")
