@@ -1,35 +1,33 @@
 #!/usr/bin/python
 from bs4 import BeautifulSoup
-# import getpass
 import urllib.request
 from selenium import webdriver
-# from selenium.webdriver.common.keys import Keys
 
 # Set up the webdriver with extensiosn
 # options = webdriver.ChromeOptions() 
-# options.add_extension("ublockorigin.crx")
-#options.add_extension("blockimages.crx")
-#options.add_extension("disableautoplay.crx")
-#driver = webdriver.Chrome(chrome_options=options)
+# options.add_extension("./optional-chromedriver-plugins/ublockorigin.crx")
+# options.add_extension("./optional-chromedriver-plugins/blockimages.crx")
+# options.add_extension("./optional-chromedriver-plugins/disableautoplay.crx")
+# driver = webdriver.Chrome(chrome_options=options)
+# driver.get("https://www.kissanime.to/Login")
+
 ffprofile = webdriver.FirefoxProfile("./366j48ag.selenium")
 driver= webdriver.Firefox(firefox_profile=ffprofile)
-#driver.get("https://www.kissanime.to/Login")
 
 driver.get("https://www.kissanime.to/AnimeList")
 
-# Get inputs for login + serach
+# Get inputs for login + serach -- OUTDATED
 # username = input("Username: ")
 # password = getpass.getpass("Password: ")
-keyword = input("Enter Search Terms: ")
-print("Loading...")
-
 # user_elem = driver.find_element_by_id("username")
 # user_elem.send_keys(username)
-
 # pass_elem = driver.find_element_by_id("password")
 # pass_elem.send_keys(password)
-
 # driver.find_element_by_id("btnSubmit").click()
+
+# get keywords to search
+keyword = input("Enter Search Terms: ")
+print("Loading...")
 
 # Send data
 search_elem = driver.find_element_by_id("keyword")
