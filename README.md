@@ -2,7 +2,7 @@
 
 By Grant Espe
 
-This program is used to download anime in bulk off of www.kissanime.to
+This script is used to download anime in bulk off of www.kissanime.to
 
 To Run, Simply execute ./getAnime.sh
     this will launch a firefox webdriver in a hidden xvfb window
