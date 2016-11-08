@@ -2,6 +2,7 @@
 from bs4 import BeautifulSoup
 import urllib.request
 from selenium import webdriver
+import time
 
 def main():
 
@@ -38,7 +39,11 @@ def main():
     driver.find_element_by_id("imgSearch").click()
     # check if you typed exact anime (kiss will forward to episodes page)
     links = []
+    while("/Anime/" not in driver.current_url and "/Search/" not in driver.current_url):
+        time.sleep(0.5)
+
     if("/Anime/" not in driver.current_url):
+        print( "HERHERE")
         # parse links
         soup = BeautifulSoup(driver.page_source, "html.parser")
 
@@ -59,7 +64,7 @@ def main():
         nums = map(int, num_string.split(' '))
 
     else:
-        links = driver.current_url
+        links.append(driver.current_url[19:])
         nums = [1]
 
     # Cycle through the list of ints (Shows)
